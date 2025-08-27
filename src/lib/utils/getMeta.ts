@@ -1,5 +1,4 @@
 import { render, type CollectionEntry } from "astro:content";
-import { authorsHandler } from "@/lib/handlers/authors";
 import { SITE } from "@/lib/config";
 import defaultImage from "@/assets/images/default-image.jpg";
 import type { ArticleMeta, Meta } from "@/lib/types";
@@ -24,7 +23,6 @@ export const getMeta = async (
       }
 
       const { remarkPluginFrontmatter } = await render(collection);
-      const authors = authorsHandler.getAuthors(collection.data.authors);
 
       const meta: ArticleMeta = {
         title: `${capitalizeFirstLetter(collection.data.title)} - ${SITE.title}`,
@@ -34,10 +32,6 @@ export const getMeta = async (
         ogImageAlt: collection.data.covert_alt || collection.data.title,
         publishedTime: normalizeDate(collection.data.publishedTime),
         lastModified: remarkPluginFrontmatter.lastModified,
-        authors: authors.map((author) => ({
-          name: author.data.name,
-          link: `${author.id}`,
-        })),
         type: "article",
       }
 

@@ -11,7 +11,6 @@ export const articleSchema = (image: ImageFunction) =>
     title: z.string().max(60, "Too long, max 60 characters"),
     description: z.string().max(160, "Too long, max 160 characters"),
     category: reference("categories"),
-    authors: z.array(reference("authors")).min(1),
     publishedTime: z.string().datetime().or(z.date()),
   });
 
@@ -30,27 +29,3 @@ export const categorySchema = z.object({
       "The string must be a slug (only lowercase letters, numbers, and hyphens)."
     ),
 });
-
-export const authorSchema = (Image: ImageFunction) =>
-  z.object({
-    name: z.string(),
-    job: z.string(),
-    avatar: Image(),
-    bio: z.string(),
-    social: z.array(
-      z.object({
-        name: z.string(),
-        url: z.string(),
-        icon: z.string(),
-      })
-    ),
-  });
-
-// avatar: Image().refine(
-//   (img) => {
-//       const isValidWidth = img.width > 100 && img.width < 2000;
-//       const isValidHeight = img.height > 100 && img.height < 2000;
-//       return isValidWidth && isValidHeight;
-//   },
-//   "Avatar image must have width and height between 100 and 2000"
-// ),

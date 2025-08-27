@@ -1,12 +1,9 @@
 import type { Link } from "../types";
 
 export const SITE = {
-  title: "Astro News",
-  description: "A news website built with Astro",
-  author: "Mohammad Rahmani",
-  url: "https://astro-news-six.vercel.app",
-  github: "https://github.com/Mrahmani71/astro-news",
-  locale: "en-US",
+  title: "Keks Magazin",
+  description: "...",
+  locale: "de",
   dir: "ltr",
   charset: "UTF-8",
   basePath: "/",
@@ -46,26 +43,6 @@ export const OTHER_LINKS: Link[] = [
     text: "About us",
   },
   {
-    href: "/authors",
-    text: "Authors",
-  },
-  {
-    href: "/contact",
-    text: "Contact",
-  },
-  {
-    href: "/privacy",
-    text: "Privacy",
-  },
-  {
-    href: "/terms",
-    text: "Terms",
-  },
-  {
-    href: "/cookie-policy",
-    text: "Cookie Policy",
-  },
-  {
     href: "https://astro-news-six.vercel.app/rss.xml",
     text: "RSS",
   },
@@ -77,23 +54,13 @@ export const OTHER_LINKS: Link[] = [
 
 export const SOCIAL_LINKS: Link[] = [
   {
-    href: "https://github.com",
-    text: "GitHub",
-    icon: "github",
+    href: "https://www.instagram.com",
+    text: "Instagram",
+    icon: "instagram",
   },
   {
-    href: "httpe://www.t.me",
-    text: "Telegram",
-    icon: "telegram",
-  },
-  {
-    href: "https://twitter.com",
-    text: "Twitter",
-    icon: "newTwitter",
-  },
-  {
-    href: "https://www.facebook.com",
-    text: "Facebook",
-    icon: "facebook",
+    href: "https://www.bsky.app",
+    text: "Bluesky",
+    icon: "bluesky",
   },
 ];

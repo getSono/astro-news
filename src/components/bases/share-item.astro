@@ -1,7 +1,6 @@
 ---
 import Clipboard from "@/assets/svgs/clipboard.astro";
 import Facebook from "@/assets/svgs/facebook.astro";
-import Linkedin from "@/assets/svgs/linkedin.astro";
 import Twitter from "@/assets/svgs/twitter.astro";
 import Whatsapp from "@/assets/svgs/whatsapp.astro";
 
@@ -11,7 +10,7 @@ type Props = {
   dataAwSocialShare: string;
   dataAwUrl: string | URL;
   dataAwText: string;
-  icon: "clipboard" | "facebook" | "linkedin" | "twitter" | "whatsapp";
+  icon: "clipboard" | "facebook" | "twitter" | "whatsapp";
 };
 
 const { className, title, dataAwSocialShare, dataAwUrl, dataAwText, icon } =
@@ -21,7 +20,6 @@ const { className, title, dataAwSocialShare, dataAwUrl, dataAwText, icon } =
 const iconMap = {
   clipboard: Clipboard,
   facebook: Facebook,
-  linkedin: Linkedin,
   twitter: Twitter,
   whatsapp: Whatsapp,
 } as const;
@@ -65,16 +63,5 @@ const buttonClasses = [
 <style>
   .slide:hover .shareIcon {
     animation: slide-in-top 0.3s both;
-  }
-
-  @keyframes slide-in-top {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
 </style>

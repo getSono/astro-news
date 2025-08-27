@@ -1,9 +1,13 @@
 ---
 import BaseLayout from "@/layouts/base.astro";
 import { getEntry } from "astro:content";
-import Headlines from "@/pages/_home/headlines.astro";
 import LatestNews from "@/pages/_home/latestNews.astro";
-import Authors from "@/pages/_home/authors.astro";
+import LatestProgramming from "./_home/latestProgramming.astro";
+import LatestTechnology from "./_home/latestTechnology.astro";
+import LatestLifestyle from "./_home/latestLifestyle.astro";
+import LatestProductivity from "./_home/latestProductivity.astro";
+import LatestHealth from "./_home/latestHealth.astro";
+import LatestFinance from "./_home/latestFinance.astro";
 
 const entry = await getEntry("views", "home");
 
@@ -13,7 +17,11 @@ if (!entry) {
 ---
 
 <BaseLayout entry={entry}>
-  <Headlines />
   <LatestNews />
-  <Authors />
+  <LatestTechnology />
+  <LatestProgramming />
+  <LatestLifestyle />
+  <LatestProductivity />
+  <LatestHealth />
+  <LatestFinance />
 </BaseLayout>

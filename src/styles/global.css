@@ -73,3 +73,12 @@
     @apply hover:underline decoration-primary;
   }
 }
+blockquote {
+  @apply border-2 border-teal-400 pl-4 italic text-gray-600 bg-gray-100 rounded-lg shadow-md;
+}
+
+[data-theme="dark"] blockquote,
+.dark blockquote {
+  @apply border-2 border-teal-400 pl-4 italic text-gray-400 bg-gray-800 rounded-lg shadow-md;
+}
+
