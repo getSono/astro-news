@@ -1,4 +1,4 @@
-# 🍪 Keks Magazin News
+# 🍪 astro-news
 A new website for our blog.
 
 > [!WARNING]
